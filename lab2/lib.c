@@ -27,7 +27,8 @@ unsigned int get_hash(const char* str){
         hash = hash + *str;
     hash = hash*hash;
     char temp[20];
-    itoa(hash, temp, 10);
+    sprintf(temp, "%d", hash);
+    // itoa(hash, temp, 10);
 
     int len = strlen(temp);
     int a= 0;
