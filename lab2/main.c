@@ -4,9 +4,10 @@
 #include "lib.h"
 
 // Компиляция:
-// gcc -g -c lib.c
-// gcc -g -c main.c
-// gcc -o main main.o lib.o
+// gcc -c -fPIC lib.c -lm
+// gcc -shared -o libmy.so lib.o -lm
+// gcc -c main.c
+// gcc -o main main.o -L<pwd> -lmy -Wl,-rpath,<pwd>
 
 
 int main(){
